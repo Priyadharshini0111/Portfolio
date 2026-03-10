@@ -9,8 +9,8 @@
 }
 
 :root {
-  --background: rgb(24, 24, 24);
-  --second-background: rgb(21, 21, 21);
+  --background: rgb(233, 221, 221);
+  --second-background: rgb(233, 220, 220);
   --gradient: linear-gradient(to right, #7c89c7, #686daa);
 }
 
@@ -118,7 +118,7 @@ section {
   justify-content: center;
   gap: 2em;
   text-align: center;
-  color: white;
+  color: rgb(2, 1, 1);
 }
 
 #home img {
@@ -145,6 +145,7 @@ section {
 
 .info-box p {
   opacity: 0.8;
+  color: black;
 }
 
 .btn-box {
@@ -177,6 +178,7 @@ section {
   padding-top: 8em;
   padding-bottom: 4em;
   text-align: center;
+  color: black;
 }
 
 .header {
@@ -216,6 +218,7 @@ section {
 .about-box p {
   opacity: 0.85;
   line-height: 1.6;
+  color: black;
 }
 
 .skills ul,
@@ -268,6 +271,7 @@ section {
   padding-top: 8em;
   padding-bottom: 4em;
   text-align: center;
+  color: black;
 }
 
 .header {
@@ -289,7 +293,7 @@ section {
 }
 
 .project-card {
-  background-color: #1c1c1c;
+  background-color: #f3f3f3;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -341,6 +345,7 @@ section {
   padding-top: 8em;
   padding-bottom: 4em;
   text-align: center;
+  color: black;
 }
 
 .header {
@@ -354,6 +359,7 @@ section {
   -webkit-text-fill-color: transparent;
   color: transparent;
   text-align: center;
+  color: black;
 }
 
 
@@ -468,7 +474,7 @@ footer{
   display: flex;
   flex-direction: column;
   gap: 1em;
-  color: white;
+  color: rgb(1, 0, 0);
   max-width: 500px;
 }
 .col-right span{
