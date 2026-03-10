@@ -1,0 +1,587 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --background: rgb(24, 24, 24);
+  --second-background: rgb(21, 21, 21);
+  --gradient: linear-gradient(to right, #7c89c7, #686daa);
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--background);
+  color: white;
+}
+.btn {
+  display: inline-block;
+  background-color: #fff;
+  color: #000;
+  padding: 1em 3em;       /* Makes button larger */
+  font-size: 1.2rem;       /* Larger text */
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* ===================== NAVIGATION ===================== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 2em 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(15, 15, 15, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+nav .logo {
+  font-size: 2em;
+  font-weight: 800;
+  color: white;
+  opacity: 0.8;
+  transition: 0.2s ease-in-out;
+}
+
+nav .logo:hover {
+  opacity: 1;
+}
+
+nav .links {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+}
+
+nav .links a {
+  color: white;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+nav .links a:hover {
+  opacity: 1;
+}
+
+nav .btn {
+  display: inline-block;
+  padding: 0.5em 1.2em;
+  border: 1px solid white;
+  border-radius: 0.5em;
+  font-size: 1.1em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  background-color: transparent;   /* Explicitly set */
+  color: white;                    /* White text initially */
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav .btn:hover {
+  background-color: white;         /* White background */
+  color: black;                    /* 🔁 Set text to black when hovered */
+}
+
+
+span {
+  background: var(--gradient);
+  background-clip: text;
+  color: transparent;
+}
+
+/* ===================== HOME SECTION ===================== */
+section {
+  padding: 6% 10%;
+  min-height: 100vh;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  text-align: center;
+  color: white;
+}
+
+#home img {
+  width: 180px;
+  border-radius: 50%;
+  margin-top: 3em;
+}
+
+.info-box {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.info-box h1 {
+  font-size: 3em;
+}
+
+.info-box h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.info-box p {
+  opacity: 0.8;
+}
+
+.btn-box {
+  display: flex;
+  gap: 1.5em;
+  margin-top: 1em;
+}
+
+.btn-box .btn {
+  padding: 0.5em 1.2em;
+}
+.btn-box .btn:nth-of-type(2):hover {
+  background-color: white;
+  color: var(--background);
+}
+
+.btn-box .btn:nth-of-type(2):hover {
+  background-color: var(--background);
+  color: white;
+}
+
+/* ===================== ABOUT SECTION ===================== */
+#about {
+  background-color: var(--second-background);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+  align-items: center;
+  justify-content: center; /* ← changed from space-between */
+  padding-top: 8em;
+  padding-bottom: 4em;
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  font-size: 3.5rem;
+  margin-bottom: 2em;
+  background: linear-gradient(90deg, #a977b0, #889ea8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+
+#about img {
+  max-width: 500em;
+  margin-right: 55em;   
+  width: 350px;
+  border-radius: 1em;
+  padding-top: 5em;
+}
+
+.about-box {
+  max-width: 700px;
+}
+
+.about-box h1{
+    font-size: 3rem;
+}
+.about-box h3 {
+  margin: 1em 0 0.5em;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.about-box p {
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+.skills ul,
+.internships ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+.skills ul li,
+.internships ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.7em;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.skills ul li span,
+.internships ul li span {
+  display: flex;
+  align-items: left;
+  gap: 0.5em;
+  transition: 0.3s ease-in-out;
+}
+
+/* ===================== SCROLLBAR ===================== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+/* ===================== PROJECT SECTION ===================== */
+#projects {
+  background-color: var(--second-background);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+  align-items: center;
+  justify-content: center; /* ← changed from space-between */
+  padding-top: 8em;
+  padding-bottom: 4em;
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  font-size: 3.5rem;
+  margin-bottom: 2em;
+  background: linear-gradient(90deg, #d946ef, #0ea5e9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.projects-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.project-card {
+  background-color: #1c1c1c;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-title {
+  font-size: 1.5rem;
+  color: #8be9fd;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.project-link {
+  color: #ff79c6;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.project-image {
+  width: 50%;
+  margin-top: 10px;
+  border-radius: 8px;
+  max-height: 300px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+#contact {
+  background-color: var(--second-background);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+  align-items: center;
+  justify-content: center; /* ← changed from space-between */
+  padding-top: 8em;
+  padding-bottom: 4em;
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  font-size: 3.5rem; /* increased font size */
+  margin-bottom: 2em; /* reduced space between title and form */
+  background: linear-gradient(90deg, #d946ef, #0ea5e9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-align: center;
+}
+
+
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+form .input-box{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 1em
+}
+.info-box span{
+  font-size: 1.5em;
+}
+form input{
+  font-size: 1.3em;
+  padding: 1em 5em;
+  border-radius: 0.5em;
+  border: none;
+  outline: none;
+}
+form input:focus{
+  background: rgb(229, 229, 229);
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10em;
+  bottom: 0;
+  background-color: var(--background);
+  width: 100%;
+  padding: 5em 15%;
+}
+.col-left{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.col-box{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.col-box i{
+  font-size: 2em;
+}
+.col-box span{
+  font-size: 1.2em;
+}
+.share-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.share-trigger {
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 500;
+  background: linear-gradient(90deg, #d946ef, #0ea5e9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.share-menu {
+  display: none;
+  position: absolute;
+  top: 120%;       /* ⬅ appears just below the icon */
+  left: 0;         /* ⬅ aligned to the left of the icon */
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05); /* transparent glassy look */
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  white-space: nowrap;
+  z-index: 100;
+}
+
+.share-menu a {
+  display: block;
+  margin: 6px 0;
+  font-size: 14px;
+  background: linear-gradient(90deg, #d946ef, #0ea5e9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.share-menu a:hover {
+  opacity: 0.7;
+}
+
+
+.col-right{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  color: white;
+  max-width: 500px;
+}
+.col-right span{
+  font-size: 1.3em;
+}
+.col-right .social-icons{
+  display: flex;
+  align-items: baseline;
+  justify-content: left;
+  gap: 1em;
+}
+.col-right .social-icons i{
+  font-size: 2em;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.social-icons i:hover{
+  color: white;
+}
+
+@media(max-width:968px){
+
+  section{
+    padding: 8em 15%;
+  }
+  nav .btn{
+    display: none;
+  }
+  menu{
+    display: block;
+  }
+  .links{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 1em 3em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+    background: rgba(0,0,0,9);
+    display: none;
+
+  }
+  .links a{
+    margin: 2em 0;
+    display: block;
+    font-size: 1.5em;
+    color: white;
+
+  }
+  .links.active{
+    display: block;
+  }
+  #home h1{
+    font-size: 4em;
+  }
+  #home h3{
+    font-size: 2em;
+  }
+  #home img{
+    width: 24vw;
+  }
+
+  #about{
+    flex-direction: column;
+  }
+  #about img{
+    width: 32vw;
+  }
+  #about h1{
+    font-size: 1em
+  }
+  #about ul{
+    font-size: 1em;
+  }
+}
+
+@media(max-width:768px){
+  #home h1{
+    font-size: 2.5em;
+  }
+  #home h3{
+    font-size: 1.5em;
+  }
+  #home img{
+    width: 32vw;
+  }
+
+  #about .skills{
+    gap: 3em;
+  }
+
+  #projects .header{
+    font-size: 3em;
+  }
+
+  #contact .header{
+    font-size: 3em;
+  }
+
+  #contact .input-box span{
+    font-size: 1.2em;
+  }
+
+  .input-box input{
+    padding: 0.5em 1em;
+  }
+
+  footer{
+    flex-direction: column;
+    gap: 5em;
+    align-items: baseline;
+  }
+}
